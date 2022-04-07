@@ -1,3 +1,5 @@
+AZURE:
+
 Create a VM in Azure
 Login to the VM
 Execute below command to get the complete VM METADAT in json format
@@ -11,4 +13,20 @@ curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?ap
 curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq .compute.osProfile
 
 
+AWS:
+The AWS IMDSv1 has an API
 
+http://169.254.169.254/latest/meta-data/
+
+The first call will return the top level Keys and we need to iterate the list of keys with the same API with the key amended at the end. Some of the keys may return another array of keys.
+
+http://169.254.169.254/latest/meta-data/{key}
+
+Finally we need to keep track all the keys and the values and build the JSON Object.
+
+To obtain a value for a single key we still might need to retrieve the entire meta-data and traverse through the JSON tree to find the value for the given key. For further info refer to AWS docs
+
+GCP:
+In GCP it is again similar to the AWS the first request will return a directory and the users have to make further calls to the api to get the values.
+
+curl "http://metadata.google.internal/computeMetadata/v1/instance/" -H "Metadata-Flavor: Google"
