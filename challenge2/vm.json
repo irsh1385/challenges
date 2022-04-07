@@ -1,0 +1,126 @@
+{
+  "compute": {
+    "azEnvironment": "AzurePublicCloud",
+    "customData": "",
+    "isHostCompatibilityLayerVm": "false",
+    "licenseType": "",
+    "location": "WestIndia",
+    "name": "vm1",
+    "offer": "RHEL",
+    "osProfile": {
+      "adminUsername": "azureadmin",
+      "computerName": "vm1"
+    },
+    "osType": "Linux",
+    "placementGroupId": "",
+    "plan": {
+      "name": "",
+      "product": "",
+      "publisher": ""
+    },
+    "platformFaultDomain": "0",
+    "platformUpdateDomain": "0",
+    "provider": "Microsoft.Compute",
+    "publicKeys": [],
+    "publisher": "RedHat",
+    "resourceGroupName": "irshad",
+    "resourceId": "/subscriptions/b24a90a9-e734-447c-8b05-538ec98094ad/resourceGroups/irshad/providers/Microsoft.Compute/virtualMachines/vm1",
+    "securityProfile": {
+      "secureBootEnabled": "false",
+      "virtualTpmEnabled": "false"
+    },
+    "sku": "82gen2",
+    "storageProfile": {
+      "dataDisks": [],
+      "imageReference": {
+        "id": "",
+        "offer": "RHEL",
+        "publisher": "RedHat",
+        "sku": "82gen2",
+        "version": "latest"
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diffDiskSettings": {
+          "option": ""
+        },
+        "diskSizeGB": "64",
+        "encryptionSettings": {
+          "enabled": "false"
+        },
+        "image": {
+          "uri": ""
+        },
+        "managedDisk": {
+          "id": "/subscriptions/b24a90a9-e734-447c-8b05-538ec98094ad/resourceGroups/irshad/providers/Microsoft.Compute/disks/vm1_OsDisk_1_7c80fabc03954a65b92fe6c45eb4a5ca",
+          "storageAccountType": "StandardSSD_LRS"
+        },
+        "name": "vm1_OsDisk_1_7c80fabc03954a65b92fe6c45eb4a5ca",
+        "osType": "Linux",
+        "vhd": {
+          "uri": ""
+        },
+        "writeAcceleratorEnabled": "false"
+      }
+    },
+    "subscriptionId": "b24a90a9-e734-447c-8b05-538ec98094ad",
+    "tags": "Created_by:irshad;ccoe-backup-region:westindia;env:dev;function:demo;launched_by:Irshad Ahmed;launched_date:07-Apr-2022",
+    "tagsList": [
+      {
+        "name": "Created_by",
+        "value": "irshad"
+      },
+      {
+        "name": "ccoe-backup-region",
+        "value": "westindia"
+      },
+      {
+        "name": "env",
+        "value": "dev"
+      },
+      {
+        "name": "function",
+        "value": "demo"
+      },
+      {
+        "name": "launched_by",
+        "value": "Irshad Ahmed"
+      },
+      {
+        "name": "launched_date",
+        "value": "07-Apr-2022"
+      }
+    ],
+    "version": "8.2.2022031402",
+    "vmId": "85371c34-9722-448b-b1a7-1ff82e6bdc08",
+    "vmScaleSetName": "",
+    "vmSize": "Standard_B2s",
+    "zone": ""
+  },
+  "network": {
+    "interface": [
+      {
+        "ipv4": {
+          "ipAddress": [
+            {
+              "privateIpAddress": "10.0.0.4",
+              "publicIpAddress": "104.211.187.252"
+            }
+          ],
+          "subnet": [
+            {
+              "address": "10.0.0.0",
+              "prefix": "24"
+            }
+          ]
+        },
+        "ipv6": {
+          "ipAddress": []
+        },
+        "macAddress": "000D3AF11D2F"
+      }
+    ]
+  }
+}
+

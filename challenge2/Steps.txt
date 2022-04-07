@@ -1,0 +1,14 @@
+Create a VM in Azure
+Login to the VM
+Execute below command to get the complete VM METADAT in json format
+command :: curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq
+Output : VM.json
+
+To Retrieve speciic key , the key details can be passed as a parameter to jq command
+
+Eg:
+curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq .compute.tags
+curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq .compute.osProfile
+
+
+
