@@ -1,0 +1,13 @@
+[admin@vm-01 ~]$ ./check_function.sh
+Please enter the file name having the nested json object
+fist_input.json
+Please provide the key in format [ '.a.b.c' ]::
+.a.b.c
+Value ::: "d"
+[admin@vm-01 ~]$ ./check_function.sh
+Please enter the file name having the nested json object
+second_input.json
+Please provide the key in format [ '.a.b.c' ]::
+.x.y.z
+Value ::: "a"
+[admin@vm-01 ~]$
