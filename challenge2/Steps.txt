@@ -2,16 +2,35 @@ AZURE:
 
 Create a VM in Azure
 Login to the VM
-Execute below command to get the complete VM METADAT in json format
-command :: curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq
-Output : VM.json
+Execute the script metadata.sh 
+It has 2 options :
+- To view complete Metadata as on output
+  Output : Uploaded as VM.json.
+- To view value of specific key from the VM metadat 
+  Output : 
+  [azureadmin@vm1 ~]$ ./metadata.sh
+1: For complete VM Metadata
+2: For specisfic key from VM MetaData
+e: Exit
+2
+Enter the spefic key name from VM metadata
+osType
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  2832  100  2832    0     0   251k      0 --:--:-- --:--:-- --:--:--  251k
+"Linux"
 
-To Retrieve speciic key , the key details can be passed as a parameter to jq command
-
-Eg:
-curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq .compute.tags
-curl -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2020-09-01" | /usr/bin/jq .compute.osProfile
-
+  [azureadmin@vm1 ~]$ ./metadata.sh
+1: For complete VM Metadata
+2: For specisfic key from VM MetaData
+e: Exit
+2
+Enter the spefic key name from VM metadata
+tags
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  2832  100  2832    0     0   251k      0 --:--:-- --:--:-- --:--:--  251k
+"Created_by:irshad;ccoe-backup-region:westindia;env:dev;function:demo;launched_by:Irshad Ahmed;launched_date:07-Apr-2022"
 
 AWS:
 The AWS IMDSv1 has an API
